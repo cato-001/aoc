@@ -35,7 +35,6 @@ pub fn main() !void {
         if (numberStr.len&1 == 1) {
             numberFirstHalf = std.math.pow(usize, 10, numberStr.len>>1);
             number = std.math.pow(usize, 10, numberStr.len) + numberFirstHalf;
-            numberStr.len += 1;
             numberBuffer = @splat('0');
             numberStr = numberBuffer[0..numberStr.len];
             numberStr[0] = '1';
